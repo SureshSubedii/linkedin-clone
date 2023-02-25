@@ -12,11 +12,12 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 
 function Header() {
   return (
-    <div className='header'><h1>
-        
-        </h1>
+    <>
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <div className='header'>
+      
         <div className="header_left">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
+            <img src="https://image.similarpng.com/very-thumbnail/2020/07/Linkedin-logo-on-transparent-Background-PNG-.png" 
             alt="" />
             <div className="header_search">
                 <SearchIcon/>
@@ -35,6 +36,7 @@ function Header() {
      
         
     </div>
+    </>
   )
 }
 

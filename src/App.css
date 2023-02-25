@@ -1,12 +1,11 @@
 .app{
+    background-color:#f3f2ef;;
     display: flex;
-    background-color: #d8a312;
     flex-direction: column;
-    align-items: center;
-
-
+    align-items: left;
 
 }
+
 .app_body{
     display: flex;
 }
