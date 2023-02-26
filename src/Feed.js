@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState,useEffect } from 'react';
 import CreateIcon from '@mui/icons-material/Create';
 import './Feed.css'
 import InputOptions from './InputOptions';
@@ -7,11 +7,25 @@ import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import Post from './Post';
+import { db } from './firebase'
 
 function Feed() {
     const [posts, setposts] = useState([]);
+    useEffect(() => {
+        db.collection("posts").onSnapshot(snapshot=>(
+            setposts(snapshot.docs.map(doc=>({
+                id:doc.id,
+                data:doc.data()
+            })))
+
+        ))
+      
+
+    }, [])
+    
     const sendPost=e=>{
         e.preventDefault();
+      
 
     }
   return (
