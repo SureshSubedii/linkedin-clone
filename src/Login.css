@@ -1,0 +1,30 @@
+.login{
+    display:grid;
+    place-items: center;
+    /* margin-left: auto;
+    margin-left: auto; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+.login>img{ 
+    object-fit: contain;     /* To keep the aspect ratio */
+    height: 150px;
+    margin-left: 20px;
+    margin-left: 20px;
+
+
+}
+.login>form{
+    display: flex;
+    flex-direction: column;
+
+}
+.login>form>input{
+    width:350px;
+    height:30px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}

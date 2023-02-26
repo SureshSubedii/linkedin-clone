@@ -1,35 +1,29 @@
 import Feed from './Feed';
-// import React,{useState,useEffect} from 'react';
 import './App.css';
 import Header from './Header';
 import Sidebar from './Sidebar'
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/counter/userSlice';
+import React from 'react'
+import Login from './Login';
+
 
 
 function App() {
-//  const [state, setstate] = useState({mobileView:false})
-//  const {mobileView}=state;
-//  useEffect(() => {
-//    const responsiveness=()=>{
-//     return window.innerWidth<900?
-//     setstate((prevState))
-//    }
- 
-//    return () => {
-//      second
-//    }
-//  }, [third])
+const user=useSelector(selectUser)
+
  
   return (
-    <>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <div className="app">
+    
+   <div className="app">
      <Header/>
-     <div className="app_body">
+     {!user?(<Login/>):
+   (<div className="app_body">
       <Sidebar />
       <Feed />
      </div>
+    )}
     </div>
-    </>
   );
 }
 

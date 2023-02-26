@@ -10,7 +10,7 @@ import SendIcon from '@mui/icons-material/Send';
 function Post({name,description,message,photoUrl}) {
   return <div className="post">
     <div className="post_header">
-        <Avatar/>
+        <Avatar src='https://jw-webmagazine.com/wp-content/uploads/2020/03/Kimetsu-no-YaibaDemon-Slayer.jpg'/>
         <div className="post_info">
             <h2>{name}</h2>
             <p>{description}</p>
