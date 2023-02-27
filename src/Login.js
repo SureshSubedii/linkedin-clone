@@ -41,7 +41,7 @@ function Login() {
             dispatch(logIn ({
                 email:userAuth.user.email,
                 uid:userAuth.user.uid,
-                displName:name,
+                displayName:name,
                 photoUrl:profilepic
                 
 

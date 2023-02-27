@@ -7,10 +7,9 @@ import HeaderOptions from './HeaderOptions';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { useDispatch } from 'react-redux';
-import { logOut } from './features/counter/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { logOut, selectUser } from './features/counter/userSlice';
 import { auth } from './firebase';
-// var About = require('./HeaderOptions').default
 
 
 function Header() {
@@ -22,7 +21,6 @@ function Header() {
   }
   return (
     <>
-     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <div className='header'>
       
         <div className="header_left">
@@ -40,7 +38,7 @@ function Header() {
         <HeaderOptions  Icon={BusinessCenterIcon} title="Jobs"/>
         <HeaderOptions  Icon={ChatIcon} title="Messagings"/>
         <HeaderOptions  Icon={NotificationsIcon} title="Notifications"/>
-        <HeaderOptions onClick={loggedOutOfApp} avatar="https://jw-webmagazine.com/wp-content/uploads/2020/03/Kimetsu-no-YaibaDemon-Slayer.jpg" title="Me"/>
+        <HeaderOptions avatar={true} onClick={loggedOutOfApp}  title="Me"/>
         </div>
      
         

@@ -1,5 +1,5 @@
 import { Avatar } from '@mui/material'
-import React from 'react'
+import React,{forwardRef}from 'react'
 import InputOptions from './InputOptions'
 import './Post.css'
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
@@ -7,10 +7,10 @@ import InsertCommentIcon from '@mui/icons-material/InsertComment';
 import CachedIcon from '@mui/icons-material/Cached';
 import SendIcon from '@mui/icons-material/Send';
 
-function Post({name,description,message,photoUrl}) {
-  return <div className="post">
+const Post=forwardRef(({name,description,message,photoUrl},ref)=> {
+  return <div ref={ref} className="post">
     <div className="post_header">
-        <Avatar src='https://jw-webmagazine.com/wp-content/uploads/2020/03/Kimetsu-no-YaibaDemon-Slayer.jpg'/>
+        <Avatar src={photoUrl}>  {name[0]}</Avatar>
         <div className="post_info">
             <h2>{name}</h2>
             <p>{description}</p>
@@ -29,6 +29,6 @@ function Post({name,description,message,photoUrl}) {
     </div>
   </div>
   
-}
+})
 
 export default Post
