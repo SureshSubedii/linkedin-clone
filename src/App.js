@@ -7,6 +7,7 @@ import { logOut, selectUser,logIn } from './features/counter/userSlice';
 import React,{useEffect} from 'react'
 import Login from './Login';
 import { auth } from './firebase';
+import Widgets from './Widgets';
 
 
 
@@ -43,6 +44,7 @@ useEffect(() => {
    (<div className="app_body">
       <Sidebar />
       <Feed />
+      <Widgets/>
      </div>
     )}
     </div>
