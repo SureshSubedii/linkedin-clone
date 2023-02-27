@@ -7,8 +7,8 @@ import HeaderOptions from './HeaderOptions';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { useDispatch, useSelector } from 'react-redux';
-import { logOut, selectUser } from './features/counter/userSlice';
+import { useDispatch } from 'react-redux';
+import { logOut } from './features/counter/userSlice';
 import { auth } from './firebase';
 
 
@@ -24,7 +24,7 @@ function Header() {
     <div className='header'>
       
         <div className="header_left">
-            <img src="https://image.similarpng.com/very-thumbnail/2020/07/Linkedin-logo-on-transparent-Background-PNG-.png" 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
             alt="" />
             <div className="header_search">
                 <SearchIcon/>

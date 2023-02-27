@@ -18,6 +18,7 @@
 }
 .header_left {
     display: flex;
+    background-color: white 
 
 }
 .header_search{
@@ -37,5 +38,6 @@
 }
 .header_right {
     display: flex;
+    padding:2x;
     margin-left:260px;
 }

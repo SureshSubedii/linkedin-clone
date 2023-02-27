@@ -16,6 +16,7 @@ const user=useSelector(selectUser);
 const dispatch=useDispatch();
 
 useEffect(() => {
+  document.body.style.backgroundColor='#f3f2ef'
  auth.onAuthStateChanged(userAuth=>{
   if(userAuth){
     //Logged in
