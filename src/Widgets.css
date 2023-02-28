@@ -7,6 +7,8 @@
     height: fit-content;
     border:1px solid lightgray;
     border-radius: 10px;
+    width: max-content;
+    
    
 }
 .widgets_headers{
@@ -32,7 +34,8 @@
     size: 5px;
 }
 .widget_articlesRight{
-    width: max-content;
+    
+    width:max-content;
 
 }
 .widget_articlesRight>h4{
